@@ -4,33 +4,96 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
-    <!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <link rel="stylesheet" href="./assets/styles/tailwind.css">
+    <title>Artesanía Viva</title>
   </head>
-  <body>
-    <div class="uoc-container">
-      <picture>
-        <source
-          srcset="./assets/images/logo.png?as=webp&width=350"
-          type="image/webp"
-        />
-        <img
-          src="./assets/images/logo.png?width=350"
-          alt="Universitat Oberta de Catalunya"
-          class="uoc-logo"
-        />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
-    <include src="./views/footer.html"></include>
+
+  <body class="bg-[#f8efe1] text-[#2b2118]">
+    <header class="sticky top-0 z-50 border-b border-[#e4d1b6] bg-[#fffaf2]/95 shadow-[0_4px_18px_rgb(43_33_24_/_6%)] backdrop-blur">
+      <nav class="mx-auto flex max-w-[1180px] items-center justify-between px-4 py-4">
+        <a class="logo" href="index.html">
+          Artesanía Viva
+        </a>
+
+        <button
+          class="text-4xl text-[#2b2118] lg:hidden"
+          aria-label="Abrir menú">
+          ☰
+        </button>
+
+        <ul class="hidden items-center gap-8 lg:flex">
+          <li>
+            <a class="nav-link-custom" href="index.html">
+              Inicio
+            </a>
+          </li>
+
+          <li>
+            <a class="nav-link-custom" href="ponentes.html">
+              Ponentes
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="flex overflow-hidden items-center bg-[radial-gradient(circle_at_top_left,rgb(167_101_50_/_15%),transparent_40%),radial-gradient(circle_at_bottom_right,rgb(43_33_24_/_10%),transparent_40%),linear-gradient(180deg,#f8efe1_0%,#eadbc5_100%)] py-[clamp(3rem,6vw,6rem)]">
+        <div class="mx-auto grid max-w-[1180px] grid-cols-1 items-center gap-[clamp(2rem,6vw,5rem)] px-4 md:grid-cols-[1.1fr_0.9fr]">
+          <div>
+            <p class="mb-6 w-fit rounded-full border border-[#e4d1b6] bg-[#fffaf2] px-4 py-2 text-[0.85rem] font-bold uppercase tracking-[0.08em] text-[#7a451f] shadow-sm">
+              Badalona · Primavera 2026
+            </p>
+
+         <h1 class="m-0 max-w-[720px] text-[clamp(3rem,5.5vw,5rem)] font-extrabold leading-[0.95] tracking-[-0.06em]">
+              Jornadas de Artesanía
+            </h1>
+
+            <p class="mt-7 max-w-[620px] text-[clamp(1.1rem,2vw,1.35rem)] leading-[1.6] text-[#5f4a37]">
+              Un encuentro para descubrir el valor del trabajo artesanal a través
+              de talleres, charlas y experiencias creativas.
+            </p>
+
+            <div class="mt-9 flex flex-wrap gap-4">
+              <a href="ponentes.html" class="btn-primary">
+                Descubrir ponentes
+              </a>
+            </div>
+          </div>
+
+          <div class="relative rounded-[2rem] border border-[#e4d1b6] bg-[#fffaf2]/95 p-[clamp(2.2rem,4vw,3.2rem)] shadow-[0_24px_70px_rgb(47_34_24_/_16%)] before:absolute before:right-8 before:top-[-1rem] before:text-[5rem] before:text-[#a45f2b] before:content-['✦']">
+            <p class="mb-4 text-[0.85rem] font-extrabold uppercase tracking-[0.08em] text-[#a45f2b]">
+              Evento destacado
+            </p>
+
+            <h2 class="m-0 text-[clamp(1.8rem,3vw,2.8rem)] font-bold leading-none">
+              Tradición, diseño y creatividad
+            </h2>
+
+            <p class="mt-5 text-[1.05rem] leading-[1.6] text-[#5f4a37]">
+              Espacios de aprendizaje para conectar con oficios, materiales y procesos artesanales.
+            </p>
+
+            <div class="mt-8 grid gap-3">
+              <span class="info">3 días</span>
+              <span class="info">12 talleres</span>
+              <span class="info">Entrada abierta</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-[#fffaf2] py-16">
+        <div class="mx-auto grid max-w-[1180px] gap-6 px-4 md:grid-cols-3">
+         <include src="views/components/feature-card.html"></include>
+         <include src="views/components/speaker-card.html"></include>
+         <include src="views/components/cta.html"></include>
+        </div>
+      </section>
+    </main>
+
+    <include src="views/footer.html"></include>
+
     <script type="module" src="./assets/scripts/main.js"></script>
-    <!-- do not remove this line! -->
   </body>
 </html>

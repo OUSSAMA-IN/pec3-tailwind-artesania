@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+.logo {
+  @apply text-xl font-bold tracking-tight text-[#2b2118];
+}
+
+.nav-link-custom {
+  @apply relative font-semibold text-[#2b2118] transition hover:text-[#a45f2b]
+  after:content-['']
+  after:absolute
+  after:left-0
+  after:-bottom-1
+  after:h-[2px]
+  after:w-0
+  after:bg-[#a76532]
+  after:transition-all
+  after:duration-300
+  hover:after:w-full;
+}
+
+.btn-primary {
+  @apply inline-flex min-h-12 items-center justify-center rounded-full bg-[#2b2118] px-6 py-3 font-bold text-[#fffaf2] transition hover:bg-[#a45f2b];
+}
+
+.footer-link {
+  @apply text-[#fffaf2] transition hover:text-[#d8a15f];
+}
+.info {
+  @apply block rounded-2xl bg-[#f6efe4] p-4 font-bold;
+}
+@import "tailwindcss";
+
+.speakers {
+  @apply bg-[#f8efe1];
+}
+
+.speakers__intro {
+  @apply mb-12 rounded-[2rem] p-10 shadow-[0_24px_80px_rgb(47_34_24_/_12%)];
+  background:
+    linear-gradient(90deg, rgb(255 250 242 / 85%), rgb(255 250 242 / 55%)),
+    image-set(
+      url("../images/imagen_hero-600.webp") 1x,
+      url("../images/imagen_hero-900.webp") 2x,
+      url("../images/imagen_hero-1700.webp") 3x
+    ) center / cover no-repeat;
+}
+
+.speakers__badge {
+  @apply inline-block rounded-full bg-[#a76532] px-3 py-2 text-xs font-extrabold uppercase tracking-[0.12em] text-[#fffaf2];
+}
+
+.speakers__title {
+  @apply mt-6 text-5xl font-bold tracking-[-0.04em] text-[#2b2118];
+}
+
+.speakers__title::after {
+  content: "";
+  @apply mt-4 block h-1 w-[190px] rounded-full bg-[#a76532];
+}
+
+.speakers__text {
+  @apply mt-6 max-w-[650px] text-[1.15rem] leading-8 text-[#5f4a37];
+}
+
+.speakers__grid {
+  @apply grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3;
+}
+
+.speaker-card {
+  @apply overflow-hidden rounded-[1.3rem] border border-[#ead8bd] bg-[#fffaf2]
+  shadow-[0_18px_50px_rgb(47_34_24_/_10%)]
+  transition duration-300 hover:-translate-y-2;
+}
+
+.speaker-card__image {
+  @apply h-[260px] w-full object-cover transition duration-500;
+}
+
+.speaker-card:hover .speaker-card__image {
+  @apply scale-105;
+}
+
+.speaker-card__body {
+  @apply border-t border-[#ead8bd] p-6;
+}
+
+.speaker-card__body::before {
+  content: "";
+  @apply mb-4 block h-[3px] w-[42px] rounded-full bg-[#a76532];
+}
+
+.speaker-card__role {
+  @apply text-xs font-extrabold uppercase tracking-[0.16em] text-[#a76532];
+}
+
+.speaker-card__name {
+  @apply mt-2 text-[1.35rem] font-bold tracking-[-0.02em] text-[#2b2118];
+}
+
+.speaker-card__text {
+  @apply mt-4 leading-7 text-[#5f4a37];
+}
+
+.speakers__note {
+  @apply mx-auto mt-10 max-w-[900px] rounded-2xl border border-dashed border-[#a76532]/30
+  bg-[#fffaf2]/80 px-6 py-5 text-center text-sm leading-7 text-[#6b5845];
+}
+
+.speakers__action {
+  @apply mt-10 text-center;
+}
