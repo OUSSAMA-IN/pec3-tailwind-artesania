@@ -9,33 +9,28 @@
   </head>
 
   <body class="bg-[#f8efe1] text-[#2b2118]">
-    <header class="sticky top-0 z-50 border-b border-[#e4d1b6] bg-[#fffaf2]/95 shadow-[0_4px_18px_rgb(43_33_24_/_6%)] backdrop-blur">
-      <nav class="mx-auto flex max-w-[1180px] items-center justify-between px-4 py-4">
-        <a class="logo" href="index.html">
-          Artesanía Viva
-        </a>
+   <header class="sticky top-0 z-50 border-b border-[#e4d1b6] bg-[#fffaf2]/95 shadow-[0_4px_18px_rgb(43_33_24_/_6%)] backdrop-blur">
+  <details class="mx-auto max-w-[1180px] px-4 py-4 lg:hidden">
+    <summary class="flex cursor-pointer list-none items-center justify-between">
+      <span class="logo">Artesanía Viva</span>
+      <span class="text-4xl leading-none text-[#2b2118]">☰</span>
+    </summary>
 
-        <button
-          class="text-4xl text-[#2b2118] lg:hidden"
-          aria-label="Abrir menú">
-          ☰
-        </button>
+    <nav class="mt-4 flex flex-col gap-4">
+      <a class="font-semibold text-[#2b2118]" href="index.html">Inicio</a>
+      <a class="font-semibold text-[#2b2118]" href="ponentes.html">Ponentes</a>
+    </nav>
+  </details>
 
-        <ul class="hidden items-center gap-8 lg:flex">
-          <li>
-            <a class="nav-link-custom" href="index.html">
-              Inicio
-            </a>
-          </li>
+  <nav class="mx-auto hidden max-w-[1180px] items-center justify-between px-4 py-4 lg:flex">
+    <a class="logo" href="index.html">Artesanía Viva</a>
 
-          <li>
-            <a class="nav-link-custom" href="ponentes.html">
-              Ponentes
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <ul class="flex items-center gap-8">
+      <li><a class="nav-link-custom" href="index.html">Inicio</a></li>
+      <li><a class="nav-link-custom" href="ponentes.html">Ponentes</a></li>
+    </ul>
+  </nav>
+</header>
 
     <main>
       <section class="flex overflow-hidden items-center bg-[radial-gradient(circle_at_top_left,rgb(167_101_50_/_15%),transparent_40%),radial-gradient(circle_at_bottom_right,rgb(43_33_24_/_10%),transparent_40%),linear-gradient(180deg,#f8efe1_0%,#eadbc5_100%)] py-[clamp(3rem,6vw,6rem)]">
